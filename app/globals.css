@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Swiss / International style: light neutral field, single accent, 8px rhythm */
+:root {
+  --page: #f4f4f5;
+  --surface: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: #525252;
+  --hairline: #e4e4e7;
+  --accent: #1e3a5f;
+  --accent-hover: #152a45;
+  --on-accent: #ffffff;
+  --status-open: #166534;
+  --focus-ring: #2563eb;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-on-accent: var(--on-accent);
+  --color-status-open: var(--status-open);
+  --color-focus-ring: var(--focus-ring);
+
+  --spacing-section: 4rem;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  background-color: var(--page);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Geometric focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
